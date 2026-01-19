@@ -1,0 +1,666 @@
+/* ============================================
+   TVEITA BYGG ENK - Responsive Styles
+   Mobile-first responsive breakpoints
+   ============================================ */
+
+/* ============================================
+   Large Desktop (1200px+)
+   ============================================ */
+@media (min-width: 1200px) {
+    .container {
+        padding: 0 var(--space-8);
+    }
+}
+
+/* ============================================
+   Desktop (1024px - 1199px)
+   ============================================ */
+@media (max-width: 1199px) {
+    :root {
+        --text-5xl: 2.25rem;
+        --text-4xl: 1.875rem;
+        --text-3xl: 1.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: var(--space-8);
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   Tablet (768px - 1023px)
+   ============================================ */
+@media (max-width: 1023px) {
+    :root {
+        --header-height: 70px;
+    }
+
+    /* Header */
+    .nav-links {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        background-color: var(--color-white);
+        flex-direction: column;
+        padding: var(--space-6);
+        gap: var(--space-4);
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-normal);
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-link {
+        padding: var(--space-3);
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--color-light);
+    }
+
+    .nav-cta {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Hero */
+    .hero h1 {
+        font-size: var(--text-4xl);
+    }
+
+    .hero-features {
+        gap: var(--space-6);
+    }
+
+    /* Intro */
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .intro-image {
+        order: -1;
+    }
+
+    .intro-image-badge {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Why Us */
+    .why-us-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .why-us-image {
+        order: -1;
+    }
+
+    /* Service Area */
+    .service-area-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Trust */
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .trust-image {
+        order: -1;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+        max-width: 100%;
+    }
+
+    /* Services Page */
+    .service-detail-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .service-detail:nth-child(even) .service-detail-grid {
+        direction: ltr;
+    }
+
+    .service-detail-image {
+        order: -1;
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* About Page */
+    .about-intro-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .about-intro-image {
+        order: -1;
+    }
+
+    .local-knowledge-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .area-detail-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Projects Page */
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Contact Page */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+}
+
+/* ============================================
+   Mobile Large (576px - 767px)
+   ============================================ */
+@media (max-width: 767px) {
+    :root {
+        --text-5xl: 2rem;
+        --text-4xl: 1.625rem;
+        --text-3xl: 1.375rem;
+        --text-2xl: 1.25rem;
+    }
+
+    .section {
+        padding: var(--space-12) 0;
+    }
+
+    .section-lg {
+        padding: var(--space-16) 0;
+    }
+
+    .container {
+        padding: 0 var(--space-4);
+    }
+
+    /* Buttons */
+    .btn {
+        padding: var(--space-3) var(--space-6);
+        font-size: var(--text-sm);
+    }
+
+    .btn-lg {
+        padding: var(--space-4) var(--space-8);
+        font-size: var(--text-base);
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding-top: calc(var(--header-height) + var(--space-12));
+        padding-bottom: var(--space-12);
+    }
+
+    .hero-badge {
+        font-size: var(--text-xs);
+    }
+
+    .hero h1 {
+        font-size: var(--text-3xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--text-base);
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    /* Quick Contact */
+    .quick-contact-inner {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    /* Intro */
+    .intro-signature {
+        text-align: center;
+    }
+
+    .intro-image-badge {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: var(--space-4);
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: var(--space-6);
+    }
+
+    /* Why Us */
+    .why-us-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .why-us-item-icon {
+        margin: 0 auto;
+    }
+
+    /* Service Area */
+    .service-area-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Trust */
+    .trust-points {
+        grid-template-columns: 1fr;
+    }
+
+    /* CTA */
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .footer-brand {
+        grid-column: span 1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-legal {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    /* Page Header */
+    .page-header {
+        padding-top: calc(var(--header-height) + var(--space-10));
+        padding-bottom: var(--space-10);
+    }
+
+    .page-header h1 {
+        font-size: var(--text-3xl);
+    }
+
+    .page-header p {
+        font-size: var(--text-base);
+    }
+
+    /* Services Page */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* About Page */
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .weather-points {
+        grid-template-columns: 1fr;
+    }
+
+    .area-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Projects Page */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-types-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Page */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-wrapper {
+        padding: var(--space-6);
+    }
+
+    /* Map */
+    .map-section {
+        height: 300px;
+    }
+}
+
+/* ============================================
+   Mobile Small (up to 575px)
+   ============================================ */
+@media (max-width: 575px) {
+    :root {
+        --text-5xl: 1.75rem;
+        --text-4xl: 1.5rem;
+        --text-3xl: 1.25rem;
+        --text-2xl: 1.125rem;
+    }
+
+    /* Header */
+    .logo-text {
+        font-size: var(--text-base);
+    }
+
+    .logo-text span {
+        font-size: var(--text-xs);
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Hero */
+    .hero h1 {
+        font-size: var(--text-2xl);
+    }
+
+    .hero-feature {
+        width: 100%;
+    }
+
+    /* Service cards */
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .service-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* Contact items */
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-item-icon {
+        margin: 0 auto;
+    }
+
+    /* Forms */
+    .form-control {
+        padding: var(--space-3);
+    }
+
+    /* Pricing */
+    .pricing-card {
+        padding: var(--space-6);
+    }
+
+    .pricing-card .price {
+        font-size: var(--text-2xl);
+    }
+
+    /* Values */
+    .value-card {
+        padding: var(--space-6);
+    }
+
+    /* Weather points */
+    .weather-point {
+        padding: var(--space-3);
+    }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+    .header,
+    .footer,
+    .cta,
+    .quick-contact,
+    .btn,
+    form {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 2rem 0;
+        background: none;
+    }
+
+    .hero-background {
+        display: none;
+    }
+
+    .hero h1,
+    .hero-subtitle {
+        color: #000;
+    }
+
+    .section {
+        padding: 1rem 0;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #666;
+    }
+}
+
+/* ============================================
+   Accessibility Improvements
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    :root {
+        --color-primary: #0D2540;
+        --color-secondary: #8B5A2B;
+        --color-accent: #2E6B6B;
+        --color-gray: #4A4A4A;
+        --color-gray-light: #6B6B6B;
+    }
+
+    .btn {
+        border-width: 3px;
+    }
+
+    .form-control {
+        border-width: 2px;
+    }
+}
+
+/* Focus visible styles for keyboard navigation */
+*:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--space-2) var(--space-4);
+    z-index: 10000;
+    transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* ============================================
+   Additional Responsive Fixes
+   ============================================ */
+
+/* Tablet - Project Types Grid */
+@media (max-width: 1023px) {
+    .project-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .faq-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-area-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile - Project Types Grid */
+@media (max-width: 767px) {
+    .project-types-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-area-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-step {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .process-step:not(:last-child)::before {
+        display: none;
+    }
+
+    .process-step-number {
+        margin: 0 auto var(--space-4);
+    }
+
+    .testimonial-highlight {
+        padding: var(--space-8);
+    }
+
+    .testimonial-highlight blockquote {
+        font-size: var(--text-lg);
+    }
+
+    .free-inspection-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .free-inspection-icon {
+        margin: 0 auto;
+    }
+
+    .checkbox-label {
+        align-items: flex-start;
+    }
+}
